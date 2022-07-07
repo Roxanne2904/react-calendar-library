@@ -1,4 +1,4 @@
-# RV-React-plugin-calendar
+# RoxV-react-calendar
 
 ![](https://github.com/Roxanne2904/rv-react-plugin-calendar/blob/main/assets/introduce.png)
 
@@ -6,36 +6,29 @@
 
 ## All Depedencies
 
-## Dependencies
-
-- @fortawesome/fontawesome-svg-core: "^6.1.1",
-- @fortawesome/free-solid-svg-icons: "^6.1.1",
-- @fortawesome/react-fontawesome: "^0.1.18",
-- postcss: "^8.4.14",
-- styled-components: "^5.3.5"
-
 ## DevDepedencies
 
-- @babel/core: "^7.18.2",
-- @babel/preset-react: "^7.17.12",
+- @babel/core: "^7.18.6",
+- @babel/preset-react: "^7.18.6",
 - @rollup/plugin-node-resolve: "^13.3.0",
-- @storybook/addon-actions: "^6.5.8",
-- @storybook/addon-essentials: "^6.5.8",
-- @storybook/addon-interactions: "^6.5.8",
-- @storybook/addon-links: "^6.5.8",
-- @storybook/builder-webpack4: "^6.5.8",
-- @storybook/manager-webpack4: "^6.5.8",
-- @storybook/react: "^6.5.8",
-- @storybook/testing-library: "^0.0.11",
+- @storybook/addon-actions: "^6.5.9",
+- @storybook/addon-essentials: "^6.5.9",
+- @storybook/addon-interactions: "^6.5.9",
+- @storybook/addon-links: "^6.5.9",
+- @storybook/builder-webpack4: "^6.5.9",
+- @storybook/manager-webpack4: "^6.5.9",
+- @storybook/react: "^6.5.9",
+- @storybook/testing-library: "^0.0.13",
 - babel-loader: "^8.2.5",
 - prop-types: "^15.8.1",
-- react: "^18.1.0",
-- react-dom: "^18.1.0",
-- rollup: "^2.75.6",
+- react: "^18.2.0",
+- react-dom: "^18.2.0",
+- rollup: "^2.75.7",
 - rollup-plugin-babel: "^4.4.0",
 - rollup-plugin-peer-deps-external: "^2.2.4",
 - rollup-plugin-postcss: "^4.0.2",
-- rollup-plugin-terser: "^7.0.2"
+- rollup-plugin-terser: "^7.0.2",
+- styled-components: "^5.3.5"
 
 ## Use
 
@@ -43,7 +36,7 @@
 
 ### ...Clone his repository...
 
-> ...you have to go [there](https://github.com/Roxanne2904/rv-react-plugin-calendar)
+> ...you have to go [there](https://github.com/Roxanne2904/roxv-react-calendar.git)
 >
 > > then...
 >
@@ -63,21 +56,21 @@
 
 > you have to enter command line bellow on your terminal:
 >
-> `npm i rv-react-plugin-calendar`
+> `npm i roxv-react-calendar`
 
 ## Introduction
 
 ### Documentation
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/52718e94-4d67-42d6-bd55-0b7a7e0ae837/deploy-status)](https://app.netlify.com/sites/rv-react-plugin-calendar/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/52718e94-4d67-42d6-bd55-0b7a7e0ae837/deploy-status)](https://app.netlify.com/sites/roxv-react-calendar/deploys)
 
-> Have a look to the full documentation, [here](https://rv-react-plugin-calendar.netlify.app/?path=/docs/ui-calendar--default)
+> Have a look to the full documentation, [here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-calendar--default)
 >
-> You can also see the behavior of the component in simulation with an input type text, [here](https://rv-react-plugin-calendar.netlify.app/?path=/docs/ui-calendar--calendar-usage-simulation)
+> You can also see the behavior of the component in simulation with an input type text, [here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-calendar--calendar-usage-simulation)
 
 ### All possibilities
 
-> With `RV-React-plugin-calendar` you will be able to...:
+> With `RoxV-react-calendar` you will be able to...:
 
 - change the type of the input value:
   > > ex: `20/06/2022` or `2022/06/20`
@@ -107,7 +100,7 @@
 >
 > > - Do on your terminal:
 >
-> > `npm i rv-react-plugin-calendar`
+> > `npm i roxv-react-calendar`
 > >
 > > 2. Then I will show you a typical example, for a react app, to implement it:
 >
@@ -197,4 +190,4 @@
 
 ---
 
-> Thanks for choosing my rv-react-plugin-calendar! :)
+> Thanks for choosing my roxv-react-calendar! :)
