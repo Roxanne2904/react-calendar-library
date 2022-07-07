@@ -24,10 +24,13 @@ export default [
     globals: { "styled-components": "styled" },
     plugins: [
       postcss({ plugins: [], minimize: true }),
-      babel({
-        exclude: "node_modules/**",
-        presets: ["@babel/preset-react"],
-      }),
+      babel(
+        {
+          exclude: "node_modules/**",
+          presets: ["@babel/preset-react"],
+        },
+        ["babel-plugin-styled-components"]
+      ),
       external(),
       resolve(),
       terser(),
