@@ -1,0 +1,362 @@
+.datePickerIsOpened {
+  display: block;
+}
+.datePickerIsClosed {
+  display: none;
+}
+
+/* .calendarDisplay { */
+/* position: absolute;
+  left: 0;
+  top: 40px; */
+/* width: 200px;
+  min-height: 235px;
+  background: #fff;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 15px 15px;
+} */
+
+/* .mdpc-head {
+  display: flex;
+  float: left;
+  width: 100%; */
+/* height: 53px; */
+/* cursor: pointer;
+} */
+
+/* .mdpc-body {
+  float: left;
+  width: 100%; */
+/* margin-top: 3px; */
+/* } */
+
+/* .cc-month,
+.cc-head,
+.cch-name,
+.cc-body,
+.cdc-day span,
+.cdc-day,
+.c-day-container,
+.c-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+
+/* .c-container {
+  width: 100%;
+  height: 100%;
+} */
+
+/* .cc-head {
+  height: 30px;
+  width: 100%;
+  /* margin-top: 10px; */
+
+/* .cch-name {
+  width: 14.285%;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #666;
+  font-size: 9px;
+  text-align: center;
+} */
+
+/* .cc-body {
+  height: 100%;
+  width: 100%;
+} */
+
+/* .cdc-day {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  font-weight: 300;
+  color: #444;
+  text-align: center;
+  margin: 1px;
+} */
+
+/* .cdc-day span:hover {
+  cursor: pointer;
+  background: #eee;
+} */
+
+/* .cdc-day span {
+  width: 25px;
+  height: 25px;
+   margin-top: -15px;
+  margin-left: -15px; 
+  left: 50%;
+  top: 50%; 
+  font-weight: 400;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+  font-size: 0.7rem;
+} */
+
+/* .c-day-container.disabled {
+  pointer-events: none;
+}
+
+.c-day-container.disabled .cdc-day span {
+  color: #ddd;
+}
+.c-day-container.disabled .cdc-day span {
+  background: #fff !important;
+}
+.c-day-container.highlight .cdc-day span {
+  background: #efdbca;
+}
+.c-day-container.highlight-green .cdc-day span {
+  background: #d4e2cb;
+} */
+/* .year_month-container,
+.ym-content,
+.ym-button,
+.days {
+  display: flex;
+}
+
+.ym-button,
+.days {
+  justify-content: center;
+} */
+
+/* .year_month-container {
+  flex-direction: column;
+  align-items: center;
+} */
+/* .ym-content {
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: overline;
+  justify-content: space-evenly;
+  width: 100%;
+} */
+/* .ym-button {
+  float: left;
+  width: 45px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+} */
+/* .ym-display {
+  display: block;
+} */
+/* .ym-arrow {
+  display: block;
+  padding: 0 5px;
+} */
+/* .resize-year {
+  font-size: 1.2rem;
+  text-decoration: none;
+} */
+
+/* .days {
+  width: 25px;
+  height: 25px;
+  font-weight: 400;
+  border-radius: 100%;
+  align-items: center;
+  font-size: 0.72rem;
+  transition: 300ms ease-in-out;
+} */
+
+/*STYLE*/
+
+/* .days.disabled {
+  background: #fff !important;
+  color: #ddd;
+  pointer-events: none;
+} */
+
+/* .days.blue-background:hover,
+.days.red-background:hover,
+.days.green-background:hover,
+.days.purple-background:hover,
+.days.yellow-background:hover,
+.days.neutral-background:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 3px 5px rgba(24, 20, 58, 0.452);
+  z-index: 1;
+  font-weight: bold;
+} */
+
+/*blue style .days.blue-background {
+  background: #b1bbda80;
+}
+.days.blue-background:hover {
+  background: #2b489b;
+  color: white;
+}
+.blue-color {
+  color: #2b489b;
+}
+
+/**red style*/
+/* .days.red-background {
+  background: #dab1b180;
+}
+.days.red-background:hover {
+  background: #9b2b2b;
+  color: white;
+}
+.red-color {
+  color: #9b2b2b;
+} */
+/**green style*/
+/* .days.green-background {
+  background: #b1dab780;
+}
+.days.green-background:hover {
+  background: #164e22;
+  color: white;
+}
+
+.green-color {
+  color: #164e22;
+} */
+
+/**purple style*/
+/* .days.purple-background {
+  background: #d5b1da80;
+}
+.days.purple-background:hover {
+  background: #441c64;
+  color: white;
+}
+
+.purple-color {
+  color: #441c64;
+} */
+/**yellow style*/
+/* .days.yellow-background {
+  background: #eee1a598;
+}
+.days.yellow-background:hover {
+  background: #b6861f;
+  color: white;
+}
+
+.yellow-color {
+  color: #865413;
+} */
+
+/**Neutral*/
+/* .days.neutral-background {
+  background: #c9c9c969;
+}
+.days.neutral-background:hover {
+  color: rgb(0, 0, 0);
+}
+.neutral-color {
+  color: #000000;
+} */
+
+/* .days {
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 26px;
+  padding: 3px 4px;
+  font-weight: 400;
+  border: solid 1px transparent;
+  font-size: 0.7rem;
+  transition: 300ms ease-in-out;
+}
+
+.days--red--in {
+  color: #9b2b2b;
+}
+.days--green--in {
+  color: #164e22;
+}
+.days--purple--in {
+  color: #441c64;
+}
+.days--yellow--in {
+  color: #865413;
+}
+.days--blue--in {
+  color: #2b489b;
+}
+.days--neutral--in {
+  color: #000000;
+}
+
+.days--red--out,
+.days--green--out,
+.days--purple--out,
+.days--yellow--out,
+.days--blue--out,
+.days--neutral--out {
+  background: transparent !important;
+  pointer-events: none;
+  color: #ddd;
+} */
+
+/* .days:hover,
+.days--red:hover,
+.days--green:hover,
+.days--purple:hover,
+.days--yellow:hover,
+.days--blue:hover {
+  border: solid 1px transparent;
+  box-shadow: 2px 4px 4px rgba(24, 20, 58, 0.5);
+  z-index: 1;
+  cursor: pointer;
+} */
+/* .days--red--alowed:hover,
+.days--gree--alowed:hover,
+.days--purple--alowed:hover,
+.days--yellow--alowed:hover,
+.days--blue--alowed:hover,
+.days--neutral--alowed:hover {
+  color: red;
+} */
+
+/* .days--red--in:hover {
+  color: #9b2b2b;
+  background-color: #dab1b170;
+}
+.days--green--in:hover {
+  color: #164e22;
+  background-color: #b1dab770;
+}
+.days--purple--in:hover {
+  color: #441c64;
+  background-color: #d5b1da70;
+}
+.days--yellow--in:hover {
+  color: #865413;
+  background-color: #eee1a570;
+}
+.days--blue--in:hover {
+  color: #2b489b;
+  background-color: #b1bbda70;
+}
+.days--neutral--in:hover {
+  color: #000000;
+  background-color: #c9c9c970;
+} */
