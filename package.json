@@ -6,7 +6,7 @@
   "module": "dist/index.es.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Roxanne2904/rv-react-plugin-calendar.git"
+    "url": "https://github.com/Roxanne2904/roxv-react-calendar.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
