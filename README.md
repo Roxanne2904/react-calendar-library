@@ -40,7 +40,7 @@
 >
 > > then...
 >
-> > `git clone https://github.com/Roxanne2904/rv-react-plugin-calendar.git nameOfYourFolder`
+> > `git clone https://github.com/Roxanne2904/roxv-react-calendar.git nameOfYourFolder`
 >
 > > `cd nameOfYourFolder`
 >
@@ -62,7 +62,7 @@
 
 ### Documentation
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/52718e94-4d67-42d6-bd55-0b7a7e0ae837/deploy-status)](https://app.netlify.com/sites/roxv-react-calendar/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/647503f6-b218-474c-9ba3-3b03ea46a975/deploy-status)](https://app.netlify.com/sites/roxv-react-calendar/deploys)
 
 > Have a look to the full documentation, [here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-calendar--default)
 >
@@ -77,7 +77,7 @@
 - change your mode:
   > > ex: `blue mode`or `red mode`
   > >
-  > > [have a look here](https://rv-react-plugin-calendar.netlify.app/?path=/docs/ui-calendar--default#stories)
+  > > [have a look here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-calendar--default#stories)
 - change language:
   > > These are availables:
   > >
@@ -173,20 +173,20 @@
 > > }
 > > ```
 > >
-> > let see the result: [Here](https://rv-react-plugin-calendar.netlify.app/iframe.html?args=mode:red;language:fr;valueCustom:1;areDaysOutOfMonthAllowed:false;areSundaysAllowed:false&id=ui-calendar--calendar-usage-simulation&viewMode=story)
+> > let see the result: [Here](https://roxv-react-calendar.netlify.app/iframe.html?args=mode:red;language:fr;valueCustom:1;areDaysOutOfMonthAllowed:false;areSundaysAllowed:false&id=ui-calendar--calendar-usage-simulation&viewMode=story)
 >
 > You have also the possibility to choose more quiclky your year!...:
 >
-> ![year Input](https://github.com/Roxanne2904/rv-react-plugin-calendar/blob/main/assets/chooseAYear.png)
+> ![year Input](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/chooseAYear.png)
 >
 > ...But you can also allow days outside the month in addition to Sundays:
-> ![days out of month allowed](https://github.com/Roxanne2904/rv-react-plugin-calendar/blob/main/assets/outOfMonthOnHover.png)
+> ![days out of month allowed](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/outOfMonthOnHover.png)
 >
-> ![only sundays are not allowed](https://github.com/Roxanne2904/rv-react-plugin-calendar/blob/main/assets/only_sundays_not_allowed.png)
+> ![only sundays are not allowed](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/only_sundays_not_allowed.png)
 >
-> > To see more example and testing this component, let's go [there](https://rv-react-plugin-calendar.netlify.app/?path=/story/ui-calendar--calendar-usage-simulation)
+> > To see more example and testing this component, let's go [there](https://roxv-react-calendar.netlify.app/?path=/story/ui-calendar--calendar-usage-simulation)
 >
-> > For more visuals of the component in action go to the asset folder, [Here](https://github.com/Roxanne2904/rv-react-plugin-calendar/tree/main/assets)
+> > For more visuals of the component in action go to the asset folder, [Here](https://github.com/Roxanne2904/roxv-react-calendar/tree/main/assets)
 
 ---
 
