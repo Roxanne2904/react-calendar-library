@@ -27,7 +27,7 @@ import {
   StyledYInput,
   StyledYLabel,
 } from "./styled";
-// import "../../styles.css";
+import "../../styles.css";
 //*Tools
 import {
   todayTimestamp,
@@ -210,21 +210,50 @@ export const Calendar = ({
       return (
         <StyledCalendarContainer key={index}>
           <StyledCalendarDaysContainer>
-            <StyledCalendarDays
-              validDay={day.dayStatus}
-              currentDay={day.timestamp}
-              sundays={day.day}
-              currentMode={mode}
-              currentBackground={arrowsBackgroundColor}
-              currentColorNumbers={colorNumbers}
-              currentColorHover={colorNumbersOnHover}
-              currentColorNumberSelected={colorNumberSelected}
-              currentNumbersOutOfMonthColor={numbersOutOfMonthColor}
-              currentBackgroundHover={numberBackgroundColorHover}
-              currentNumberBackgroundSelected={numberBackgroundSelected}
-              areDaysOutOfMonthAllowed={areDaysOutOfMonthAllowed}
-              areCurrentSundaysAllowed={areSundaysAllowed}
-              daySelected={dateTimestamp}
+            <span
+              className={`day ${
+                day.dayStatus !== 0
+                  ? `${
+                      areDaysOutOfMonthAllowed
+                        ? day.day === 0
+                          ? areSundaysAllowed
+                            ? `day_out--${mode} day_out--${mode}--custom`
+                            : `day_out`
+                          : `day_out--${mode} day_out--${mode}--custom`
+                        : `day_out`
+                    } `
+                  : day.day === 0
+                  ? areSundaysAllowed
+                    ? day.timestamp === todayTimestamp
+                      ? day.timestamp === dateTimestamp
+                        ? `day_selected--${mode} day_selected--${mode}--custom`
+                        : `currentDay--${mode} currentDay--${mode}--custom`
+                      : day.timestamp === dateTimestamp
+                      ? `day_selected--${mode} day_selected--${mode}--custom`
+                      : `day_in--${mode} day_in--${mode}--custom`
+                    : `day_out`
+                  : day.timestamp === todayTimestamp
+                  ? day.timestamp === dateTimestamp
+                    ? `day_selected--${mode} day_selected--${mode}--custom`
+                    : `currentDay--${mode} currentDay--${mode}--custom`
+                  : day.timestamp === dateTimestamp
+                  ? `day_selected--${mode} day_selected--${mode}--custom`
+                  : `day_in--${mode} day_in--${mode}--custom`
+              }`}
+              // validDay={day.dayStatus}
+              // currentDay={day.timestamp}
+              // sundays={day.day}
+              // currentMode={mode}
+              // currentBackground={arrowsBackgroundColor}
+              // currentColorNumbers={colorNumbers}
+              // currentColorHover={colorNumbersOnHover}
+              // currentColorNumberSelected={colorNumberSelected}
+              // currentNumbersOutOfMonthColor={numbersOutOfMonthColor}
+              // currentBackgroundHover={numberBackgroundColorHover}
+              // currentNumberBackgroundSelected={numberBackgroundSelected}
+              // areDaysOutOfMonthAllowed={areDaysOutOfMonthAllowed}
+              // areCurrentSundaysAllowed={areSundaysAllowed}
+              // daySelected={dateTimestamp}
               tabIndex={0}
               onClick={(e) => {
                 e.stopPropagation();
@@ -240,7 +269,7 @@ export const Calendar = ({
               }}
             >
               {day.date}
-            </StyledCalendarDays>
+            </span>
           </StyledCalendarDaysContainer>
         </StyledCalendarContainer>
       );

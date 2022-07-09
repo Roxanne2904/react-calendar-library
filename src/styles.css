@@ -266,15 +266,13 @@
   color: #000000;
 } */
 
-/* .days {
-
+.day {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,77 +284,141 @@
   transition: 300ms ease-in-out;
 }
 
-.days--red--in {
-  color: #9b2b2b;
-}
-.days--green--in {
-  color: #164e22;
-}
-.days--purple--in {
-  color: #441c64;
-}
-.days--yellow--in {
-  color: #865413;
-}
-.days--blue--in {
-  color: #2b489b;
-}
-.days--neutral--in {
-  color: #000000;
-}
-
-.days--red--out,
-.days--green--out,
-.days--purple--out,
-.days--yellow--out,
-.days--blue--out,
-.days--neutral--out {
-  background: transparent !important;
-  pointer-events: none;
-  color: #ddd;
-} */
-
-/* .days:hover,
-.days--red:hover,
-.days--green:hover,
-.days--purple:hover,
-.days--yellow:hover,
-.days--blue:hover {
+.day:hover {
   border: solid 1px transparent;
   box-shadow: 2px 4px 4px rgba(24, 20, 58, 0.5);
   z-index: 1;
   cursor: pointer;
-} */
-/* .days--red--alowed:hover,
-.days--gree--alowed:hover,
-.days--purple--alowed:hover,
-.days--yellow--alowed:hover,
-.days--blue--alowed:hover,
-.days--neutral--alowed:hover {
-  color: red;
-} */
+}
 
-/* .days--red--in:hover {
+/*day-in*/
+.day_in--red {
+  color: #9b2b2b;
+}
+.day_in--green {
+  color: #164e22;
+}
+.day_in--purple {
+  color: #441c64;
+}
+.day_in--yellow {
+  color: #865413;
+}
+.day_in--blue {
+  color: #2b489b;
+}
+.day_in--neutral {
+  color: #000000;
+}
+
+/*day-in-hover*/
+.day_in--red:hover,
+.currentDay--red:hover {
   color: #9b2b2b;
   background-color: #dab1b170;
 }
-.days--green--in:hover {
+.day_in--green:hover,
+.currentDay--green:hover {
   color: #164e22;
   background-color: #b1dab770;
 }
-.days--purple--in:hover {
+.day_in--purple:hover,
+.currentDay--purple:hover {
   color: #441c64;
   background-color: #d5b1da70;
 }
-.days--yellow--in:hover {
+.day_in--yellow:hover,
+.currentDay--yellow:hover {
   color: #865413;
   background-color: #eee1a570;
 }
-.days--blue--in:hover {
+.day_in--blue:hover,
+.currentDay--blue:hover {
   color: #2b489b;
   background-color: #b1bbda70;
 }
-.days--neutral--in:hover {
+.day_in--neutral:hover,
+.currentDay--neutral:hover {
   color: #000000;
   background-color: #c9c9c970;
-} */
+}
+
+.day_out {
+  background: transparent !important;
+  pointer-events: none;
+  color: #ddd;
+}
+.day_out--red {
+  color: #9b2b2b60;
+}
+.day_out--green {
+  color: #164e2260;
+}
+.day_out--purple {
+  color: #441c6460;
+}
+.day_out--yellow {
+  color: #86541360;
+}
+.day_out--blue {
+  color: #2b489b60;
+}
+.day_out--neutral {
+  color: #00000060;
+}
+
+.currentDay--red {
+  border: solid 1px #9b2b2b;
+  color: #9b2b2b;
+}
+.currentDay--green {
+  border: solid 1px #164e22;
+  color: #164e22;
+}
+.currentDay--purple {
+  border: solid 1px #441c64;
+  color: #441c64;
+}
+.currentDay--yellow {
+  border: solid 1px #865413;
+  color: #865413;
+}
+.currentDay--blue {
+  border: solid 1px #2b489b;
+  color: #2b489b;
+}
+.currentDay--neutral {
+  border: solid 1px #000000;
+  color: #000000;
+}
+
+.day_selected--red {
+  background-color: #9b2b2b;
+  color: white;
+}
+.day_selected--green {
+  background-color: #164e22;
+  color: white;
+}
+.day_selected--purple {
+  background-color: #441c64;
+  color: white;
+}
+.day_selected--yellow {
+  background-color: #865413;
+  color: white;
+}
+.day_selected--blue {
+  background-color: #2b489b;
+  color: white;
+}
+.day_selected--neutral {
+  background-color: #000000;
+  color: white;
+}
+
+/*day_in--${mode}--custom  (test)*/
+.day_selected--neutral--custom {
+  color: yellow;
+  background: green;
+}
