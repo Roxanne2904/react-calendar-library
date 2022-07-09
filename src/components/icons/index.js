@@ -1,20 +1,14 @@
 import React from "react";
-import { modeType } from "../Calendar/styled";
-export const ChevronLeft = ({ size = 16, color, currentMode }) => {
-  const myCurrentColorMode = modeType
-    .map((elt) => {
-      return currentMode === elt.mode && elt.color;
-    })
-    .filter((elt) => elt !== false)[0];
 
+export const ChevronLeft = ({ size = 16, myClassName }) => {
   return (
     <svg
+      className={`${myClassName}`}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke={color && color ? color : myCurrentColorMode}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -23,21 +17,15 @@ export const ChevronLeft = ({ size = 16, color, currentMode }) => {
     </svg>
   );
 };
-export const ChevronRight = ({ size = 16, color, currentMode }) => {
-  const myCurrentColorMode = modeType
-    .map((elt) => {
-      return currentMode === elt.mode && elt.color;
-    })
-    .filter((elt) => elt !== false)[0];
-
+export const ChevronRight = ({ size = 16, myClassName }) => {
   return (
     <svg
+      className={`${myClassName}`}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke={color && color ? color : myCurrentColorMode}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -46,21 +34,15 @@ export const ChevronRight = ({ size = 16, color, currentMode }) => {
     </svg>
   );
 };
-export const ChevronsLeft = ({ size = 16, color, currentMode }) => {
-  const myCurrentColorMode = modeType
-    .map((elt) => {
-      return currentMode === elt.mode && elt.color;
-    })
-    .filter((elt) => elt !== false)[0];
-
+export const ChevronsLeft = ({ size = 16, myClassName }) => {
   return (
     <svg
+      className={`${myClassName}`}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke={color && color ? color : myCurrentColorMode}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -70,20 +52,15 @@ export const ChevronsLeft = ({ size = 16, color, currentMode }) => {
   );
 };
 
-export const ChevronsRight = ({ size = 16, color, currentMode }) => {
-  const myCurrentColorMode = modeType
-    .map((elt) => {
-      return currentMode === elt.mode && elt.color;
-    })
-    .filter((elt) => elt !== false)[0];
+export const ChevronsRight = ({ size = 16, myClassName }) => {
   return (
     <svg
+      className={`${myClassName}`}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke={color && color ? color : myCurrentColorMode}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
