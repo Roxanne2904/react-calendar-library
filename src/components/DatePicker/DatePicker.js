@@ -18,6 +18,7 @@ export const DatePicker = ({
   numbersOutOfMonthColor,
   areDaysOutOfMonthAllowed,
   areSundaysAllowed,
+  areSundaysHighlighted,
 }) => {
   let inputRef = useRef(null);
   let pattern =
@@ -100,6 +101,7 @@ export const DatePicker = ({
             arrowsBackgroundColor={arrowsBackgroundColor}
             areDaysOutOfMonthAllowed={areDaysOutOfMonthAllowed}
             areSundaysAllowed={areSundaysAllowed}
+            areSundaysHighlighted={areSundaysHighlighted}
           />
         </div>
       </div>
@@ -172,6 +174,10 @@ DatePicker.propTypes = {
    *Choose true or false to allow interaction with sundays.
    */
   areSundaysAllowed: PropTypes.bool,
+  /**
+   *Choose true or false to allow Sundays Highlighted.
+   */
+  areSundaysHighlighted: PropTypes.bool,
 };
 
 DatePicker.defaultProps = {
@@ -188,4 +194,5 @@ DatePicker.defaultProps = {
   arrowsBackgroundColor: null,
   areDaysOutOfMonthAllowed: true,
   areSundaysAllowed: true,
+  areSundaysHighlighted: false,
 };

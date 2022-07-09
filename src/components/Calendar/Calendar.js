@@ -58,6 +58,7 @@ export const Calendar = ({
   numbersOutOfMonthColor,
   areDaysOutOfMonthAllowed,
   areSundaysAllowed,
+  areSundaysHighlighted,
 }) => {
   let date = new Date();
   const [hover, setHover] = useState(false);
@@ -217,7 +218,9 @@ export const Calendar = ({
                       areDaysOutOfMonthAllowed
                         ? day.day === 0
                           ? areSundaysAllowed
-                            ? `day_out--${mode} day_out--${mode}--custom`
+                            ? areSundaysHighlighted
+                              ? `sund_highli--${mode} sund_highli--${mode}--custom`
+                              : `day_out--${mode} day_out--${mode}--custom`
                             : `day_out`
                           : `day_out--${mode} day_out--${mode}--custom`
                         : `day_out`
@@ -230,6 +233,8 @@ export const Calendar = ({
                         : `currentDay--${mode} currentDay--${mode}--custom`
                       : day.timestamp === dateTimestamp
                       ? `day_selected--${mode} day_selected--${mode}--custom`
+                      : areSundaysHighlighted
+                      ? `sund_highli--${mode} sund_highli--${mode}--custom`
                       : `day_in--${mode} day_in--${mode}--custom`
                     : `day_out`
                   : day.timestamp === todayTimestamp
@@ -553,6 +558,10 @@ Calendar.propTypes = {
    *Choose true or false to allow interaction with sundays.
    */
   areSundaysAllowed: PropTypes.bool,
+  /**
+   *Choose true or false to allow Sundays Highlighted.
+   */
+  areSundaysHighlighted: PropTypes.bool,
 };
 
 Calendar.defaultProps = {
@@ -571,4 +580,5 @@ Calendar.defaultProps = {
   arrowsBackgroundColor: null,
   areDaysOutOfMonthAllowed: false,
   areSundaysAllowed: true,
+  areSundaysHighlighted: false,
 };

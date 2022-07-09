@@ -291,6 +291,12 @@
   cursor: pointer;
 }
 
+/* day_in--${mode}--custom  (test) */
+/* .sund_highli--red--custom {
+  color: yellow !important;
+  background: green !important;
+} */
+
 /*day-in*/
 .day_in--red {
   color: #9b2b2b;
@@ -417,8 +423,15 @@
   color: white;
 }
 
-/*day_in--${mode}--custom  (test)*/
-.day_selected--neutral--custom {
-  color: yellow;
-  background: green;
+.sund_highli--red,
+.sund_highli--purple,
+.sund_highli--yellow,
+.sund_highli--blue,
+.sund_highli--neutral {
+  color: rgb(22, 43, 22);
+  background-color: rgba(88, 209, 138, 0.151);
+}
+.sund_highli--green {
+  color: rgb(75, 45, 6);
+  background-color: rgba(209, 147, 88, 0.151);
 }
