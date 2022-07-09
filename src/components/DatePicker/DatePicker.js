@@ -181,7 +181,7 @@ export const DatePicker = ({
   const renderCalendar = () => {
     let days = monthDetails.map((day, index) => {
       return (
-        <div key={index} style={{ height: "23px" }}>
+        <div key={index} style={{ height: "25px" }}>
           <div style={{ margin: "1.2px" }}>
             <span
               className={`day ${
