@@ -1,6 +1,6 @@
 # RoxV-react-calendar
 
-![](https://github.com/Roxanne2904/rv-react-plugin-calendar/blob/main/assets/introduce.png)
+![](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/introduce.png)
 
 > This component have been created by Viette Roxanne, with [React.js](https://fr.reactjs.org/).
 
@@ -27,8 +27,7 @@
 - rollup-plugin-babel: "^4.4.0",
 - rollup-plugin-peer-deps-external: "^2.2.4",
 - rollup-plugin-postcss: "^4.0.2",
-- rollup-plugin-terser: "^7.0.2",
-- styled-components: "^5.3.5"
+- rollup-plugin-terser: "^7.0.2"
 
 ## Use
 
@@ -36,7 +35,7 @@
 
 ### ...Clone his repository...
 
-> ...you have to go [there](https://github.com/Roxanne2904/roxv-react-calendar.git)
+> ...you have to go [there](https://github.com/Roxanne2904/roxv-react-calendar)
 >
 > > then...
 >
@@ -48,7 +47,7 @@
 >
 > > `npm install` or `yarn` (if you're using yarn)
 >
-> To install all DevDepedencies ...:
+> If that is necessary, to install all DevDepedencies ...:
 >
 > > `npm install --only=dev`
 
@@ -60,17 +59,21 @@
 
 ## Introduction
 
-### Documentation
+### The Documentation
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/647503f6-b218-474c-9ba3-3b03ea46a975/deploy-status)](https://app.netlify.com/sites/roxv-react-calendar/deploys)
 
-> Have a look to the full documentation, [here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-calendar--default)
+> Have a look to the documentation using Storybook, [here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-datepicker--default)
 >
-> You can also see the behavior of the component in simulation with an input type text, [here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-calendar--calendar-usage-simulation)
+> You can also see the behavior of the component in simulation with an input type text, [here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-datepicker--date-picker-usage-simulation)
 
 ### All possibilities
 
-> With `RoxV-react-calendar` you will be able to...:
+> Currently the component `roxv-react-calendar` can only be used as a date picker but...
+>
+> ...soon we are considering the possibility of adding the period picker functionality to it.
+>
+> With `roxv-react-calendar` you will be able to...:
 
 - change the type of the input value:
   > > ex: `20/06/2022` or `2022/06/20`
@@ -82,17 +85,19 @@
   > > These are availables:
   > >
   > > `french`, `english`, `spanish`, `deutch`, `portuguese`
-- customize your arrows backgrounds Colors in order to add or remove a year,
-- customize your numbers background color on hover,
-- customize your invalid numbers color (these out of month),
-- customize your numbers color,
-- customize arrows and date color,
+- customize your arrows backgrounds buttons in order to add or remove a year,
+- customize your arrows,
+- customize numbers,
+- customize your invalid numbers (these out of month),
+- customize year and month color,
+- customize your selected day,
+- customize your current day,
+- customize Sundays if you valid sunday highlighted.
 - choose if you want or not let days out of month allowed,
-- choose your selected number background color,
-- customize your custom numbers color on hover,
-- customize your selected number color.
+- choose if you want or not let Sundays allowed,
+- choose if you want or not Sundays highlighted allowed.
 
-### Examples
+### Implement the component in my App...
 
 > How to implement my component in my App/project ?
 >
@@ -106,7 +111,7 @@
 >
 > > ```jsx
 > > import React, { useEffect, useState, useRef } from "react";
-> > import { Calendar } from "react-plugin-calendar"; //this is our component!:)
+> > import { DatePicker } from "roxv-react-calendar"; //this is our component!:)
 > >
 > > export default function myComponent() {
 > >   let inputRef = useRef(null); //to get our input dom element to link with our calendar.
@@ -157,14 +162,15 @@
 > >           />
 > >         </label>
 > >         <div>
-> >           <Calendar
+> >           <DatePicker
 > >             onChangeInputValue={validValue} // !important, in order to link on change event to your component!
 > >             myInputRef={inputRef} //!important, in order to link your input to your component!
-> >             mode={"red"} //... if you want the red mode, by default is neutral mode.
+> >             mode={"red"} //... if you want the red mode.By default is neutral mode.
 > >             language={"fr"} //... you have chosen "french" language,  by default is "en" i.e "english".
 > >             valueCustom={"1"} //... the value, on click event, will be return as "01/02/2020"
 > >             areDaysOutOfMonthAllowed={false}
-> >             areSundaysAllowed={false}
+> >             areSundaysAllowed={true}
+> >             areSundaysHighlighted={true}
 > >           />
 > >         </div>
 > >       </div>
@@ -173,7 +179,7 @@
 > > }
 > > ```
 > >
-> > let see the result: [Here](https://roxv-react-calendar.netlify.app/iframe.html?args=mode:red;language:fr;valueCustom:1;areDaysOutOfMonthAllowed:false;areSundaysAllowed:false&id=ui-calendar--calendar-usage-simulation&viewMode=story)
+> > let see the result: [Here](https://roxv-react-calendar.netlify.app/iframe.html?args=valueCustom:1;mode:red;language:fr;areDaysOutOfMonthAllowed:false;areSundaysAllowed:true;areSundaysHighlighted:true&id=ui-datepicker--date-picker-usage-simulation&viewMode=story)
 >
 > You have also the possibility to choose more quiclky your year!...:
 >
@@ -184,10 +190,141 @@
 >
 > ![only sundays are not allowed](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/only_sundays_not_allowed.png)
 >
-> > To see more example and testing this component, let's go [there](https://roxv-react-calendar.netlify.app/?path=/story/ui-calendar--calendar-usage-simulation)
+> > To see more example and testing this component, let's go [there](https://roxv-react-calendar.netlify.app/?path=/story/ui-datepicker--date-picker-usage-simulation)
 >
 > > For more visuals of the component in action go to the asset folder, [Here](https://github.com/Roxanne2904/roxv-react-calendar/tree/main/assets)
 
 ---
 
-> Thanks for choosing my roxv-react-calendar! :)
+### ...and now customize some elements!
+
+> you can customize some elements from your css!
+>
+> Let's take a closer look at the classes you will have to apply and what they are supposed to modify:
+>
+> > Note: If you saw `${mode}` this refers to the "mode" prop which is used to select a color mode for your component.
+> >
+> > If you have not entered it by default, the mode is "neutral". You will therefore have to replace "mode" with your
+> > mode if you have selected one, otherwise replace it with "neutral"
+> >
+> > - `.day_in--${mode}--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .day_in--neutral--custom {
+> >   color: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> > }
+> > ```
+> >
+> > This class will allow you to modify the css of the calendar numbers, only those included in the current month.
+> >
+> > - `.day_out--${mode}--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .day_out--neutral--custom {
+> >   color: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> > }
+> > ```
+> >
+> > This class will allow you to modify the css of the calendar numbers, only those out of month.
+> >
+> > - `.currentDay--${mode}--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .currentDay--neutral--custom {
+> >   color: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> > }
+> > ```
+> >
+> > This class will allow you to modify the current day.
+> >
+> > - `.day_selected--${mode}--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .day_selected--neutral--custom {
+> >   color: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> >   border: green solid 2px !important;
+> > }
+> > ```
+> >
+> > This class will allow you to modify the day selected.
+> >
+> > - `.sund_highli--${mode}--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .sund_highli--neutral--custom {
+> >   color: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> >   background: white !important;
+> > }
+> > ```
+> >
+> > This class will allow you to modify sundays if you have pass the props `areSundaysHighlighted` to `true`.
+> >
+> > - `.buttons_container--${mode}_year--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .buttons_container--neutral_year--custom {
+> >   background: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> > }
+> > ```
+> >
+> > This class will allow you to modify background buttons of double arrows.
+> >
+> > - `.arrows--${mode}--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .arrows--neutral--custom {
+> >   stroke: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> > }
+> > ```
+> >
+> > This class will allow you to modify all arrows, simple and double.
+> >
+> > - `.year-month_container--${mode}--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .year-month_container--neutral--custom {
+> >   color: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> > }
+> > ```
+> >
+> > This class will allow you to modify year and month color.
+> >
+> > - `.year-input--${mode}--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .year-input--neutral--custom {
+> >   color: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> > }
+> > ```
+> >
+> > This class will allow you to modify year input value.
+
+---
+
+### Areas of improvement
+
+| #id | Description                                                                          |
+| --- | ------------------------------------------------------------------------------------ |
+| 01  | A feature that will allow you to switch from either a date picker or a period picker |
+| 02  | Add a period picker                                                                  |
+| 03  | Add a select to choose a month faster                                                |
+
+> > Thanks for choosing my roxv-react-calendar! :)
