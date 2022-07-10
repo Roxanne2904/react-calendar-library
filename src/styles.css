@@ -16,6 +16,7 @@
 }
 
 .error {
+  display: flex;
   font-size: 0.65rem;
   color: red;
   background-color: white;
@@ -26,6 +27,7 @@
   animation-name: display;
   animation-duration: 700ms;
   animation-fill-mode: both;
+  justify-content: space-between;
 }
 .x-button {
   border: none;

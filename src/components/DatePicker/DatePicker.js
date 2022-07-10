@@ -462,7 +462,14 @@ export const DatePicker = ({
       </div>
       <div className={`${!closeErrorMsg ? `open error` : `close`}`}>
         {`⚠️ You must enter at least 4 digits!`}{" "}
-        <button onClick={() => setCloseErrorMsg(true)} className={`x-button`}>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setCloseErrorMsg(true);
+          }}
+          className={`x-button`}
+        >
           ❌
         </button>
       </div>
