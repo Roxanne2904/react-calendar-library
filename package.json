@@ -1,6 +1,6 @@
 {
   "name": "roxv-react-calendar",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A plugin calendar to use as a date picker with an input",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
