@@ -205,7 +205,7 @@
 >
 > Let's take a closer look at the classes you will have to apply and what they are supposed to modify:
 >
-> > Note: If you saw `${mode}` this refers to the "mode" prop which is used to select a color mode for your component.
+> > Note: If you see `${mode}` this refers to the "mode" prop which is used to select a color mode for your component.
 > >
 > > If you have not entered it by default, the mode is "neutral". You will therefore have to replace "mode" with your
 > > mode if you have selected one, otherwise replace it with "neutral"
