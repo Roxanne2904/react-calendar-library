@@ -186,9 +186,11 @@
 > ![year Input](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/chooseAYear.png)
 >
 > ...But you can also allow days outside the month in addition to Sundays...:
+>
 > ![days out of month allowed](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/outOfMonthOnHover.png)
 >
 > ...Or not allow sundays...:
+>
 > ![only sundays are not allowed](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/only_sundays_not_allowed.png)
 >
 > > To see more example and testing this component, let's go [there](https://roxv-react-calendar.netlify.app/?path=/story/ui-datepicker--date-picker-usage-simulation)
