@@ -5,6 +5,12 @@
   display: none;
 }
 
+.error {
+  font-size: 0.7rem;
+  color: red;
+  margin-left: 7px;
+}
+
 /*container pattern*/
 .daysW,
 .day,
@@ -227,6 +233,7 @@
 .calendar_body {
   float: left;
   width: 100%;
+  height: 46vh;
 }
 
 .calendar_YM_container {

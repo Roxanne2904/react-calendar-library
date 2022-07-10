@@ -17,6 +17,7 @@ export const ChevronLeft = ({ size = 16, myClassName }) => {
     </svg>
   );
 };
+
 export const ChevronRight = ({ size = 16, myClassName }) => {
   return (
     <svg
@@ -34,6 +35,7 @@ export const ChevronRight = ({ size = 16, myClassName }) => {
     </svg>
   );
 };
+
 export const ChevronsLeft = ({ size = 16, myClassName }) => {
   return (
     <svg

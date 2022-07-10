@@ -45,6 +45,7 @@ export const DatePicker = ({
     currentMonth: null,
   });
   const [closeYearForm, setCloseYearForm] = useState(false);
+  const [closeErrorMsg, setCloseErrorMsg] = useState(true);
   const [myInputValue, setMyInputValue] = useState();
   const [dateTimestamp, setDateTimestamp] = useState();
 
@@ -63,17 +64,19 @@ export const DatePicker = ({
     );
     if (myInputRef === null || myInputRef === "") {
       console.log("Error! The calendar is not linked to any input");
+      return;
     } else {
       if (myInputRef.current === null) {
         console.log(
           "Error! The calendar is linked to an input but they are not a valid input"
         );
+        return;
       } else if (
         myInputRef.current.value !== undefined ||
         myInputRef.current.value !== null ||
         myInputRef.current.value !== ""
       ) {
-        //*Display date value on input
+        //*It Display date value on input
         myInputRef.current.value = dateString;
         //*Retrieve timestamp from dateValue just displayed
         const { currentDate, currentMonth, currentYear } =
@@ -103,6 +106,7 @@ export const DatePicker = ({
         }
       } else {
         console.log("there is no value yet");
+        return;
       }
     }
   }, [selectedDay]);
@@ -132,7 +136,6 @@ export const DatePicker = ({
         currentDate
       ).getTime();
 
-      // let objectDate = new Date(currentTimestamp);
       setDateTimestamp(currentTimestamp);
       setSelectedDay({
         timestamp: currentTimestamp,
@@ -145,9 +148,21 @@ export const DatePicker = ({
     }
   }, [onChangeInputValue]);
 
+  /**
+   * onDateClick manages the updates to be made when clicking on a day of the week
+   * @param { Object } day
+   * @param { Number } day.currentMonth day.currentMonth as an integer
+   * @param { Number } day.date day.date as an integer
+   * @param { Number } day.day day.day as an integer
+   * @param { Number } dayStatus dayStatus as an integer
+   * @param { String } dayString ex:"wednesday"
+   * @param { Number } timestamp timestamp as an integer
+   * @returns
+   */
   const onDateClick = (day) => {
     if (myInputRef === null) {
       console.log("there is no input linked with the calendar component");
+      return;
     } else {
       myInputRef.current.focus();
       setSelectedDay({
@@ -159,25 +174,41 @@ export const DatePicker = ({
     }
   };
 
+  /**
+   * closeTheYearForm allows you to close the small form to change the date manually.
+   */
   const closeTheYearForm = (e) => {
     e.stopPropagation();
     !closeYearForm && setCloseYearForm(true);
   };
 
+  /**
+   * submitYear allows to manage the submission of the form allowing to change the year
+   */
   const submitYear = (e) => {
     if (e.keyCode === 13 && document.activeElement === yearRef.current) {
       e.stopPropagation();
       e.preventDefault();
       let newYear = yearRef.current.value;
       if (newYear === "" || newYear === undefined) {
+        setYear(parseInt(year));
+        setCloseErrorMsg(false);
+      } else if (newYear.length < 4) {
+        setYear(parseInt(year));
+        setCloseErrorMsg(false);
       } else {
         setYear(parseInt(newYear, 10));
+        setCloseErrorMsg(true);
       }
 
       setCloseYearForm(false);
     }
   };
 
+  /**
+   * renderCalendar returns the html content that displays the days of the week and the numbers
+   * @returns { HTMLContent }
+   */
   const renderCalendar = () => {
     let days = monthDetails.map((day, index) => {
       return (
@@ -357,6 +388,7 @@ export const DatePicker = ({
                     name="year"
                     minLength={4}
                     maxLength={4}
+                    required={true}
                     onBlur={() => setCloseYearForm(false)}
                   />
                 </label>
@@ -427,6 +459,9 @@ export const DatePicker = ({
           </div>
         </div>
         <div className={`calendar_body`}>{renderCalendar()}</div>
+        <div
+          className={`${!closeErrorMsg ? `open error` : `close`}`}
+        >{`[!]You must enter at least 4 digits!`}</div>
       </div>
     </div>
   );
