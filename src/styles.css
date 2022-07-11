@@ -18,7 +18,7 @@
 .error {
   display: flex;
   font-size: 0.65rem;
-  color: red;
+  color: rgb(170, 25, 25);
   background-color: white;
   border-radius: 10px;
   padding: 8px 15px;
@@ -28,12 +28,14 @@
   animation-duration: 700ms;
   animation-fill-mode: both;
   justify-content: space-between;
+  align-items: center;
 }
-.x-button {
+.x-button-home {
   border: none;
-  background: transparent;
+  background: white;
   cursor: pointer;
-  font-size: 0.65rem;
+  padding: 0;
+  border-radius: 50%;
 }
 
 /*container pattern*/
@@ -302,8 +304,9 @@
 }
 
 .arrows_container {
-  display: block;
-  padding: 4px 4px 2px;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
 }
 
 .arrows--red {
@@ -322,6 +325,31 @@
   stroke: #2b489b;
 }
 .arrows--neutral {
+  stroke: #000000;
+}
+
+.home {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.home-xcircle--red {
+  stroke: #9b2b2b;
+}
+.home-xcircle--green {
+  stroke: #164e22;
+}
+.home-xcircle--purple {
+  stroke: #441c64;
+}
+.home-xcircle--yellow {
+  stroke: #865413;
+}
+.home-xcircle--blue {
+  stroke: #2b489b;
+}
+.home-xcircle--neutral {
   stroke: #000000;
 }
 

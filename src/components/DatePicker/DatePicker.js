@@ -7,6 +7,8 @@ import {
   ChevronsLeft,
   ChevronRight,
   ChevronsRight,
+  Home,
+  XCircle,
 } from "../icons/index.js";
 //*Tools
 import {
@@ -33,7 +35,6 @@ export const DatePicker = ({
   areSundaysHighlighted,
 }) => {
   let date = new Date();
-  const [hover, setHover] = useState(false);
   const [year, setYear] = useState(date.getFullYear());
   const [month, setMonth] = useState(date.getMonth());
   const [monthDetails, setMonthDetails] = useState(
@@ -46,6 +47,7 @@ export const DatePicker = ({
   });
   const [closeYearForm, setCloseYearForm] = useState(false);
   const [closeErrorMsg, setCloseErrorMsg] = useState(true);
+  const [closeCalendar, setCloseCalendar] = useState(false);
   const [myInputValue, setMyInputValue] = useState();
   const [dateTimestamp, setDateTimestamp] = useState();
 
@@ -164,7 +166,6 @@ export const DatePicker = ({
       console.log("there is no input linked with the calendar component");
       return;
     } else {
-      myInputRef.current.focus();
       setSelectedDay({
         timestamp: day.timestamp,
         dayStatus: day.dayStatus,
@@ -250,14 +251,10 @@ export const DatePicker = ({
               }`}
               tabIndex={0}
               onClick={(e) => {
-                e.stopPropagation();
-                e.preventDefault();
                 onDateClick(day);
               }}
               onKeyDown={(e) => {
                 if (e.keyCode === 13) {
-                  e.stopPropagation();
-                  e.preventDefault();
                   onDateClick(day);
                 }
               }}
@@ -292,7 +289,25 @@ export const DatePicker = ({
     <div>
       <div className={`calendar`}>
         <div>
-          <div className={`calendar_YM_container`}>
+          <div
+            className={`calendar_YM_container`}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setSelectedDay({
+                timestamp: todayTimestamp,
+                dayStatus: 0,
+                currentMonth: null,
+              });
+              setYear(date.getFullYear());
+              setMonth(date.getMonth());
+            }}
+          >
+            <button className={`x-button-home`}>
+              <Home
+                myClassName={`home-xcircle--${mode} home-xcircle--${mode}--custom`}
+              />
+            </button>
             <button
               className={`buttons_container buttons_container--${mode}_year buttons_container--${mode}_year--custom`}
               onKeyDown={(e) => {
@@ -460,16 +475,18 @@ export const DatePicker = ({
         <div className={`calendar_body`}>{renderCalendar()}</div>
       </div>
       <div className={`${!closeErrorMsg ? `open error` : `close`}`}>
-        {`⚠️ You must enter at least 4 digits!`}{" "}
+        {`[!] You must enter at least 4 digits!`}{" "}
         <button
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
             setCloseErrorMsg(true);
           }}
-          className={`x-button`}
+          className={`x-button-home`}
         >
-          ❌
+          <XCircle
+            myClassName={`home-xcircle--${mode} home-xcircle--${mode}--custom`}
+          />
         </button>
       </div>
     </div>

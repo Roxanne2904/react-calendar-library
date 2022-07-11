@@ -22,9 +22,19 @@ export const DatePickerInSimulation = ({
     const addBackDrop = (e) => {
       document.activeElement !== inputRef.current && setIsItOpen(false);
     };
-    window.addEventListener("click", addBackDrop);
+    const addBackDropOnKeyDown = (e) => {
+      if (e.keyCode === 13) {
+        document.activeElement !== inputRef.current && setIsItOpen(false);
+      }
+    };
 
-    return () => window.removeEventListener("click", addBackDrop);
+    window.addEventListener("click", addBackDrop);
+    window.addEventListener("keydown", addBackDropOnKeyDown);
+
+    return () => {
+      window.removeEventListener("click", addBackDrop);
+      window.removeEventListener("keydown", addBackDropOnKeyDown);
+    };
   }, [inputRef]);
 
   const handleOpeningOfDatePicker = () => {

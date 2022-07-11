@@ -296,6 +296,18 @@
 > >
 > > This class will allow you to modify all arrows, simple and double.
 > >
+> > - `.home-xcircle--${mode}--custom`
+> >
+> > ex:
+> >
+> > ```css
+> > .home-xcircle--neutral--custom {
+> >   stroke: red !important; /* this "!important" is MANDATORY; You have to add this to override ALL previous styling rules */
+> > }
+> > ```
+> >
+> > This class will allow you to modify home icon and x-circle icon.
+> >
 > > - `.year-month_container--${mode}--custom`
 > >
 > > ex:
