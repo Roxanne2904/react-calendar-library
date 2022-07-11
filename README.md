@@ -322,12 +322,14 @@
 
 ---
 
-### Areas of improvement
+### Possibilities of areas of improvement
 
-| #id | Description                                                                          |
+| #   | Description                                                                          |
 | --- | ------------------------------------------------------------------------------------ |
-| 01  | A feature that will allow you to switch from either a date picker or a period picker |
-| 02  | Add a period picker                                                                  |
+| 01  | Add a period picker                                                                  |
+| 02  | A feature that will allow you to switch from either a date picker or a period picker |
 | 03  | Add a select to choose a month faster                                                |
+| 04  | Add more language choices                                                            |
+| 03  | Add a times picker in addition to the date picker                                    |
 
-> > Thanks for choosing my roxv-react-calendar! :)
+> Thanks for choosing my roxv-react-calendar! :)
