@@ -302,6 +302,19 @@ export const DatePicker = ({
               setYear(date.getFullYear());
               setMonth(date.getMonth());
             }}
+            onKeyDown={(e) => {
+              if (e.keyCode === 13) {
+                e.preventDefault();
+                e.stopPropagation();
+                setSelectedDay({
+                  timestamp: todayTimestamp,
+                  dayStatus: 0,
+                  currentMonth: null,
+                });
+                setYear(date.getFullYear());
+                setMonth(date.getMonth());
+              }
+            }}
           >
             <button className={`x-button-home`}>
               <Home
@@ -483,6 +496,13 @@ export const DatePicker = ({
             setCloseErrorMsg(true);
           }}
           className={`x-button-home`}
+          onKeyDown={(e) => {
+            if (e.keyCode === 13) {
+              e.preventDefault();
+              e.stopPropagation();
+              setCloseErrorMsg(true);
+            }
+          }}
         >
           <XCircle
             myClassName={`home-xcircle--${mode} home-xcircle--${mode}--custom`}
