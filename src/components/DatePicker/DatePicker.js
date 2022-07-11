@@ -388,7 +388,6 @@ export const DatePicker = ({
                     name="year"
                     minLength={4}
                     maxLength={4}
-                    required={true}
                     onBlur={() => setCloseYearForm(false)}
                   />
                 </label>
