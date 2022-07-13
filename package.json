@@ -1,6 +1,6 @@
 {
   "name": "react-calendar-library",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "A plugin calendar to use as a date picker with an input",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
