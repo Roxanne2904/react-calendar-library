@@ -14,7 +14,7 @@ export const DatePickerInSimulation = ({
 }) => {
   let inputRef = useRef(null);
   let pattern =
-    /^([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))(\/)(0[1-9]|1[0-2])(\/)([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))$/g;
+    /^([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))(\/)([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))(\/)([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))$/g;
   const [isItOpen, setIsItOpen] = useState(false);
   const [validValue, setValidValue] = useState(null);
 
@@ -117,9 +117,11 @@ DatePickerInSimulation.propTypes = {
   /**
    *Choose your value type:
    *
-   *"1" : 01/02/2022
+   *"1" : 01/02/2022 DD/MM/YYYY
    *
-   *"2" : 2022/02/01
+   *"2" : 2022/02/01 YYYY/MM/DD
+   *
+   *"3" : 02/01/2022 MM/DD/YYYY
    */
   valueCustom: PropTypes.string,
   /**

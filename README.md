@@ -1,6 +1,6 @@
-# RoxV-react-calendar
+# React-calendar-library
 
-![](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/introduce.png)
+![](https://github.com/Roxanne2904/react-calendar-library/blob/main/assets/introduce.png)
 
 > This component have been created by Viette Roxanne, with [React.js](https://fr.reactjs.org/).
 
@@ -35,11 +35,11 @@
 
 ### ...Clone his repository...
 
-> ...you have to go [there](https://github.com/Roxanne2904/roxv-react-calendar)
+> ...you have to go [there](https://github.com/Roxanne2904/react-calendar-library)
 >
 > > then...
 >
-> > `git clone https://github.com/Roxanne2904/roxv-react-calendar.git nameOfYourFolder`
+> > `git clone https://github.com/Roxanne2904/react-calendar-library.git nameOfYourFolder`
 >
 > > `cd nameOfYourFolder`
 >
@@ -55,32 +55,32 @@
 
 > you have to enter command line bellow on your terminal:
 >
-> `npm i roxv-react-calendar`
+> `npm i react-calendar-library`
 
 ## Introduction
 
 ### The Documentation
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/647503f6-b218-474c-9ba3-3b03ea46a975/deploy-status)](https://app.netlify.com/sites/roxv-react-calendar/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/647503f6-b218-474c-9ba3-3b03ea46a975/deploy-status)](https://app.netlify.com/sites/react-calendar-library/deploys)
 
-> Have a look to the documentation using Storybook, [here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-datepicker--default)
+> Have a look to the documentation using Storybook, [here](https://react-calendar-library.netlify.app/?path=/docs/ui-datepicker--default)
 >
-> You can also see the behavior of the component in simulation with an input type text, [here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-datepicker--date-picker-usage-simulation)
+> You can also see the behavior of the component in simulation with an input type text, [here](https://react-calendar-library.netlify.app/?path=/docs/ui-datepicker--date-picker-usage-simulation)
 
 ### All possibilities
 
-> Currently the component `roxv-react-calendar` can only be used as a date picker but...
+> Currently the component `react-calendar-library` can only be used as a date picker but...
 >
 > ...soon we are considering the possibility of adding the period picker functionality to it.
 >
-> With `roxv-react-calendar` you will be able to...:
+> With `react-calendar-library` you will be able to...:
 
 - change the type of the input value:
-  > > ex: `20/06/2022` or `2022/06/20`
+  > > ex: `20/06/2022` or `2022/06/20`or `06/20/2022`
 - change your mode:
   > > ex: `blue mode`or `red mode`
   > >
-  > > [have a look here](https://roxv-react-calendar.netlify.app/?path=/docs/ui-calendar--default#stories)
+  > > [have a look here](https://react-calendar-library.netlify.app/?path=/docs/ui-datepicker--default#stories)
 - change language:
   > > These are availables:
   > >
@@ -105,19 +105,19 @@
 >
 > > - Do on your terminal:
 >
-> > `npm i roxv-react-calendar`
+> > `npm i react-calendar-library`
 > >
 > > 2. Then I will show you a typical example, for a react app, to implement it:
 >
 > > ```jsx
 > > import React, { useEffect, useState, useRef } from "react";
-> > import { DatePicker } from "roxv-react-calendar"; //this is our component!:)
+> > import { DatePicker } from "react-calendar-library"; //this is our component!:)
 > >
 > > export default function myComponent() {
 > >   let inputRef = useRef(null); //to get our input dom element to link with our calendar.
 > >
 > >   let pattern =
-> >     /^([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))(\/)(0[1-9]|1[0-2])(\/)([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))$/g;
+> >     /^([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))(\/)([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))(\/)([+-]?\d{4}|(0[1-9]|[12][0-9]|3[01]))$/g;
 > >   // This pattern is for our input value, you can customize your own pattern for on change event.
 > >   const [validValue, setValidValue] = useState(null);
 > >   // this is for handle our input value
@@ -179,23 +179,23 @@
 > > }
 > > ```
 > >
-> > let see the result: [Here](https://roxv-react-calendar.netlify.app/iframe.html?args=valueCustom:1;mode:red;language:fr;areDaysOutOfMonthAllowed:false;areSundaysAllowed:true;areSundaysHighlighted:true&id=ui-datepicker--date-picker-usage-simulation&viewMode=story)
+> > let see the result: [Here](https://react-calendar-library.netlify.app/iframe.html?args=valueCustom:1;mode:red;language:fr;areDaysOutOfMonthAllowed:false;areSundaysAllowed:true;areSundaysHighlighted:true&id=ui-datepicker--date-picker-usage-simulation&viewMode=story)
 >
 > You have also the possibility to choose more quiclky your year!...:
 >
-> ![year Input](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/chooseAYear.png)
+> ![year Input](https://github.com/Roxanne2904/react-calendar-library/blob/main/assets/chooseAYear.png)
 >
 > ...But you can also allow days outside the month in addition to Sundays...:
 >
-> ![days out of month allowed](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/outOfMonthOnHover.png)
+> ![days out of month allowed](https://github.com/Roxanne2904/react-calendar-library/blob/main/assets/outOfMonthOnHover.png)
 >
 > ...Or not allow sundays...:
 >
-> ![only sundays are not allowed](https://github.com/Roxanne2904/roxv-react-calendar/blob/main/assets/only_sundays_not_allowed.png)
+> ![only sundays are not allowed](https://github.com/Roxanne2904/react-calendar-library/blob/main/assets/only_sundays_not_allowed.png)
 >
-> > To see more example and testing this component, let's go [there](https://roxv-react-calendar.netlify.app/?path=/story/ui-datepicker--date-picker-usage-simulation)
+> > To see more example and testing this component, let's go [there](https://react-calendar-library.netlify.app/?path=/story/ui-datepicker--date-picker-usage-simulation)
 >
-> > For more visuals of the component in action go to the asset folder, [Here](https://github.com/Roxanne2904/roxv-react-calendar/tree/main/assets)
+> > For more visuals of the component in action go to the asset folder, [Here](https://github.com/Roxanne2904/react-calendar-library/tree/main/assets)
 
 ---
 
@@ -344,4 +344,4 @@
 | 04  | Add more language choices                                                            |
 | 03  | Add a times picker in addition to the date picker                                    |
 
-> Thanks for choosing my roxv-react-calendar! :)
+> Thanks for choosing my react-calendar-library! :)

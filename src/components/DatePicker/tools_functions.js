@@ -259,6 +259,15 @@ export const formatValueCustom = (month, date, year, type, lang) => {
         "/" +
         (date < 10 ? "0" + date : date)
       );
+    case "3":
+      return (
+        (month < 10 ? "0" + month : month) +
+        "/" +
+        (date < 10 ? "0" + date : date) +
+        "/" +
+        year
+      );
+
     default:
       return;
   }
@@ -269,16 +278,34 @@ export const formatValueCustom = (month, date, year, type, lang) => {
  * @param { String } dateString ex: "10/07/2022"
  * @returns { Object.<currentDate, currentMonth, currentYear> }
  */
-export const formatADateStringIntoAnObject = (dateString) => {
+export const formatADateStringIntoAnObject = (dateString, valueCustom) => {
   if (dateString !== null && dateString !== undefined && dateString !== "") {
     let currentDate =
-      dateString.split("/")[0].length === 2
-        ? dateString.split("/")[0]
-        : dateString.split("/")[2];
+      valueCustom === "1"
+        ? dateString.split("/")[0].length === 2
+          ? dateString.split("/")[0]
+          : dateString.split("/")[2]
+        : valueCustom === "2"
+        ? dateString.split("/")[0].length === 2
+          ? dateString.split("/")[0]
+          : dateString.split("/")[2]
+        : dateString.split("/")[1].length === 2 && dateString.split("/")[1];
+
     currentDate =
       currentDate.split("")[0] === "0" ? currentDate.split("")[1] : currentDate;
 
-    let currentMonth = dateString.split("/")[1];
+    let currentMonth =
+      valueCustom === "1"
+        ? dateString.split("/")[1] <= "12"
+          ? dateString.split("/")[1]
+          : "12"
+        : valueCustom === "2"
+        ? dateString.split("/")[1] <= "12"
+          ? dateString.split("/")[1]
+          : "12"
+        : dateString.split("/")[0] <= "12"
+        ? dateString.split("/")[0]
+        : "12";
 
     currentMonth =
       currentMonth.split("")[0] === "0"
@@ -287,9 +314,12 @@ export const formatADateStringIntoAnObject = (dateString) => {
 
     let currentYear =
       dateString.split("/")[0].length === 4
-        ? dateString.split("/")[0]
-        : dateString.split("/")[2];
-
+        ? dateString.split("/")[0] >= "1000"
+          ? dateString.split("/")[0]
+          : "1000"
+        : dateString.split("/")[2] >= "1000"
+        ? dateString.split("/")[2]
+        : "1000";
     return { currentDate, currentMonth, currentYear };
   } else {
     return null;

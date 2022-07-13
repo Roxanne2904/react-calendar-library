@@ -82,8 +82,8 @@ export const DatePicker = ({
         myInputRef.current.value = dateString;
         //*Retrieve timestamp from dateValue just displayed
         const { currentDate, currentMonth, currentYear } =
-          formatADateStringIntoAnObject(dateString) !== null &&
-          formatADateStringIntoAnObject(dateString);
+          formatADateStringIntoAnObject(dateString, valueCustom) !== null &&
+          formatADateStringIntoAnObject(dateString, valueCustom);
 
         const updateTimestamp = new Date(
           currentYear,
@@ -120,8 +120,9 @@ export const DatePicker = ({
   useEffect(() => {
     if (onChangeInputValue !== null) {
       const { currentDate, currentMonth, currentYear } =
-        formatADateStringIntoAnObject(onChangeInputValue) !== null &&
-        formatADateStringIntoAnObject(onChangeInputValue);
+        formatADateStringIntoAnObject(onChangeInputValue, valueCustom) !==
+          null &&
+        formatADateStringIntoAnObject(onChangeInputValue, valueCustom);
 
       let monthAfterOnChange = currentMonth !== undefined && currentMonth - 1;
 
@@ -547,9 +548,11 @@ DatePicker.propTypes = {
    *
    * !If your component is not link to any input it would be useless.
    *
-   *"1" : 01/02/2022
+   *"1" : 01/02/2022 DD/MM/YYYY
    *
-   *"2" : 2022/02/01
+   *"2" : 2022/02/01 YYYY/MM/DD
+   *
+   *"3" : 02/01/2022 MM/DD/YYYY
    */
   valueCustom: PropTypes.string,
   /**

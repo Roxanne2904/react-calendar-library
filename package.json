@@ -1,12 +1,12 @@
 {
-  "name": "roxv-react-calendar",
+  "name": "react-calendar-library",
   "version": "1.0.22",
   "description": "A plugin calendar to use as a date picker with an input",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Roxanne2904/roxv-react-calendar.git"
+    "url": "https://github.com/Roxanne2904/react-calendar-library.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

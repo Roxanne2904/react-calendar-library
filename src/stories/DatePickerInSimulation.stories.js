@@ -13,7 +13,7 @@ export default {
   },
   argTypes: {
     valueCustom: {
-      options: ["1", "2"],
+      options: ["1", "2", "3"],
       control: "radio",
     },
     areDaysOutOfMonthAllowed: { control: "boolean" },
