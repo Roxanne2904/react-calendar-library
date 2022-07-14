@@ -337,6 +337,7 @@ export const getDateStringFromTimestamp = (selectedDay, valueCustom, lang) => {
   let dateObject = new Date(selectedDay.timestamp);
   let month = dateObject.getMonth() + 1;
   let date = dateObject.getDate();
+  let year = dateObject.getFullYear();
 
   if (selectedDay.dayStatus === -1) {
     let _month = selectedDay.currentMonth;
@@ -347,12 +348,11 @@ export const getDateStringFromTimestamp = (selectedDay, valueCustom, lang) => {
       if (date !== _date) {
         date = _date;
       }
+    } else if (month === 1) {
+      month = 12;
+      year = year - 1;
     } else {
-      if (month === 1) {
-        month = 12;
-      } else {
-        month = month - 1;
-      }
+      month = month - 1;
     }
   }
 
@@ -360,20 +360,13 @@ export const getDateStringFromTimestamp = (selectedDay, valueCustom, lang) => {
     let _month = selectedDay.currentMonth;
     if (month !== _month) {
       month = month + 2;
+    } else if (month === 12) {
+      month = 1;
+      year = year + 1;
     } else {
-      if (month === 12) {
-        month = 1;
-      } else {
-        month = month + 1;
-      }
+      month = month + 1;
     }
   }
 
-  return formatValueCustom(
-    month,
-    date,
-    dateObject.getFullYear(),
-    valueCustom,
-    lang
-  );
+  return formatValueCustom(month, date, year, valueCustom, lang);
 };
